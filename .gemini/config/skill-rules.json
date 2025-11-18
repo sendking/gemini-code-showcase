@@ -3,60 +3,33 @@
     {
       "id": "backend-dev",
       "match": {
-        "fileExtensions": [
-          ".ts",
-          ".js"
-        ],
-        "pathContains": [
-          "api",
-          "services",
-          "backend",
-          "server",
-          "src"
-        ]
+        "fileExtensions": [".ts", ".js"],
+        "pathContains": ["api", "services", "backend", "server"]
       },
-      "applySkills": [
-        "backend-dev-guidelines"
-      ]
+      "applySkills": ["backend-dev-guidelines"]
     },
     {
       "id": "frontend-dev",
       "match": {
-        "fileExtensions": [
-          ".tsx",
-          ".jsx",
-          ".js"
-        ],
+        "fileExtensions": [".tsx", ".jsx", ".js", ".vue", ".ts"],
         "pathContains": [
           "components",
           "ui",
           "frontend",
-          "app"
+          "app",
+          "pages",
+          "utils"
         ]
       },
-      "applySkills": [
-        "frontend-dev-guidelines"
-      ]
+      "applySkills": ["frontend-dev-guidelines"]
     },
     {
       "id": "infra",
       "match": {
-        "fileExtensions": [
-          ".yaml",
-          ".yml",
-          ".tf",
-          ".sh"
-        ],
-        "pathContains": [
-          "infrastructure",
-          "terraform",
-          "k8s",
-          "deploy"
-        ]
+        "fileExtensions": [".yaml", ".yml", ".tf", ".sh"],
+        "pathContains": ["infrastructure", "terraform", "k8s", "deploy"]
       },
-      "applySkills": [
-        "infra-guidelines"
-      ]
+      "applySkills": ["infra-guidelines"]
     }
   ]
 }

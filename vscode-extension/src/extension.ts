@@ -25,7 +25,7 @@ function matchRules(filePath: string, rules: any[]) {
 }
 
 function loadSkillContent(root: string, skillId: string) {
-  const skillPath = path.join(root, 'skills', skillId, 'SKILL.md');
+  const skillPath = path.join(root, '.gemini', 'skills', skillId, 'SKILL.md');
   if (!fs.existsSync(skillPath)) return null;
   return fs.readFileSync(skillPath, 'utf8');
 }
@@ -79,7 +79,7 @@ export function activate(context: vscode.ExtensionContext) {
   // Command: list skills
   const listCmd = vscode.commands.registerCommand('gemini.listSkills', async () => {
     if (!workspaceRoot) return vscode.window.showErrorMessage('Open a workspace to use Gemini Assistant.');
-    const skillsDir = path.join(workspaceRoot, 'skills');
+    const skillsDir = path.join(workspaceRoot, '.gemini', 'skills');
     if (!fs.existsSync(skillsDir)) return vscode.window.showErrorMessage('No skills directory found.');
     const allSkills = fs.readdirSync(skillsDir).filter(f => fs.lstatSync(path.join(skillsDir, f)).isDirectory());
     const pick = await vscode.window.showQuickPick(allSkills, { placeHolder: 'Choose a skill to apply' });
@@ -106,7 +106,7 @@ export function activate(context: vscode.ExtensionContext) {
     if (!workspaceRoot) return vscode.window.showErrorMessage('Open a workspace to use Gemini Assistant.');
 
     // Let user pick a skill or enter custom prompt
-    const skillsDir = path.join(workspaceRoot, 'skills');
+    const skillsDir = path.join(workspaceRoot, '.gemini', 'skills');
     const allSkills = fs.existsSync(skillsDir) ? fs.readdirSync(skillsDir).filter(f => fs.lstatSync(path.join(skillsDir, f)).isDirectory()) : [];
     const pick = await vscode.window.showQuickPick([...allSkills, 'CUSTOM_PROMPT'], { placeHolder: 'Choose a skill or CUSTOM_PROMPT' });
     if (!pick) return;

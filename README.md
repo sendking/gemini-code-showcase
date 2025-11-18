@@ -4,7 +4,7 @@ This repo is a Gemini-compatible adaptation of the Claude Code infra showcase.
 
 Steps to get started:
 
-1. Copy `.gemini/`, `skills/`, `agents/`, and `docs/` into your project.
+1. Copy `.gemini/`, into your project.
 2. Optionally install the VS Code extension in `vscode-extension/` to get skill suggestions.
 3. Use the `skills/` SKILL.md files as prompts for Gemini.
 
