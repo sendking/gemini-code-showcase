@@ -55,6 +55,7 @@ async function sendPromptToGemini(apiEndpoint: string, apiKey: string, model: st
 }
 
 export function activate(context: vscode.ExtensionContext) {
+  vscode.window.showInformationMessage('Gemini Assistant is activating!');
   console.log('Gemini Assistant active');
 
   const workspaceRoot = vscode.workspace.workspaceFolders?.[0]?.uri.fsPath;
