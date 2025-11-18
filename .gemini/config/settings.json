@@ -1,0 +1,7 @@
+{
+  "model": "gemini-2.0-pro-exp",
+  "max_context": 64000,
+  "auto_apply_skills": true,
+  "debug": false,
+  "inject_skill_header": true
+}

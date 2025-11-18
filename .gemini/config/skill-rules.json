@@ -1,0 +1,62 @@
+{
+  "rules": [
+    {
+      "id": "backend-dev",
+      "match": {
+        "fileExtensions": [
+          ".ts",
+          ".js"
+        ],
+        "pathContains": [
+          "api",
+          "services",
+          "backend",
+          "server",
+          "src"
+        ]
+      },
+      "applySkills": [
+        "backend-dev-guidelines"
+      ]
+    },
+    {
+      "id": "frontend-dev",
+      "match": {
+        "fileExtensions": [
+          ".tsx",
+          ".jsx",
+          ".js"
+        ],
+        "pathContains": [
+          "components",
+          "ui",
+          "frontend",
+          "app"
+        ]
+      },
+      "applySkills": [
+        "frontend-dev-guidelines"
+      ]
+    },
+    {
+      "id": "infra",
+      "match": {
+        "fileExtensions": [
+          ".yaml",
+          ".yml",
+          ".tf",
+          ".sh"
+        ],
+        "pathContains": [
+          "infrastructure",
+          "terraform",
+          "k8s",
+          "deploy"
+        ]
+      },
+      "applySkills": [
+        "infra-guidelines"
+      ]
+    }
+  ]
+}

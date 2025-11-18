@@ -1,0 +1,36 @@
+{
+  "name": "gemini-assistant",
+  "displayName": "Gemini Assistant (Skill Activator)",
+  "description": "Suggest and apply skill documents for Gemini-based AI workflows.",
+  "version": "0.1.0",
+  "engines": { "vscode": "^1.70.0" },
+  "main": "./out/extension.js",
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/node": "^18.0.0",
+    "@types/vscode": "^1.70.0",
+    "vscode": "^1.1.60"
+  },
+  "activationEvents": ["onStartupFinished", "onCommand:gemini.applySkill"],
+  "contributes": {
+    "commands": [
+      {
+        "command": "gemini.applySkill",
+        "title": "Gemini: Apply Skill"
+      },
+      {
+        "command": "gemini.listSkills",
+        "title": "Gemini: List Skills"
+      },
+      {
+        "command": "gemini.sendToModel",
+        "title": "Gemini: Send Prompt to Model (requires API key)"
+      }
+    ]
+  }
+}
