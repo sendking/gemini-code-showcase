@@ -12,3 +12,5 @@ Notes:
 
 - This template intentionally keeps model calls abstract — integrate with your preferred Gemini client.
 - The VS Code extension copies skill content to clipboard so you can paste into the Gemini UI or Google AI extension.
+
+# https://marketplace.visualstudio.com/items?itemName=kofi.gemini-code-showcase
