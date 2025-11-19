@@ -2,7 +2,7 @@
   "name": "gemini-code-showcase",
   "displayName": "Gemini Code Showcase",
   "description": "Suggest and apply skill documents for Gemini-based AI workflows.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "kofi",
   "engines": {
     "vscode": "^1.94.0"
